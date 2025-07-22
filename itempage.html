@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Інтернет-магазин SellZone</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header"></div>
+    <div id="mainBody" class="container mt-4">
+      <!--#region body  -->
+      <div class="row">
+        <div class="col-lg-6 p-0">
+          <img src="images/favicon.png" class="border w-100" style="height:30em;object-fit: contain;" id="itemImage"></img>
+          
+        </div>
+        <div class="col-lg-6 p-4 pt-0">
+          <div class="row h2" id="itemName">Product Name</div>
+          <div class="row" id="itemVendor">Продавець: невідомо</div>
+          <div class="row h5 mt-4" id="itemPrice">100Hrn</div>
+          <div class="row mt-2 align-self-end" id="buttonsHolder">
+            <div class="input-group mb-4 p-0">
+              <button class="btn btn-success" for="itemCount" style="width: 80%;" onclick="AddToCart()">Купити</button>
+              <input type="number" class="form-control" id="itemCount" value="1" min="1" max="9999">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th colspan="2">Характеристики</th>
+                </tr>
+              </thead>
+              <tbody id="itemTable">
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="row h2">Опис</div>
+            <div class="row" style="text-align: justify; text-justify: auto;" id="itemDescription">Desc</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row"><h2>Відгуки</h2>
+            <div class="form-group">
+              <label for="commentField">Напишіть свій відгук</label>
+              <textarea class="form-control" id="commentField" rows="3" maxlength="2048"></textarea>
+              <button class="btn btn-success mt-1 w-100" onclick="AddFeedback()">Залишити відгук</button>
+            </div>
+            <div id="comments">
+
+            </div>
+        </div>
+        </div>
+      </div>
+      <!--endregion-->
+    </div>
+    <div id="footer"></div>
+  </div>
+  <script src="js/ajax.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/itempage.js"></script>
+</body>
+
+</html>
